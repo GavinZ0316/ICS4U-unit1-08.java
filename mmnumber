@@ -1,0 +1,49 @@
+/****************************************************
+*Daily assignment1-08
+*Created by Gavin Zhou
+*Created on 2019-02-22
+*This program well generates 10 random numbers between 0 and 99 and returns them
+*This pogram also shows the min and max numbers
+*****************************************************/
+
+class  mmnumber {
+	public static void main(String[] args) {
+		// this list will have 10 numbers
+		int array [] = new int[10];
+		
+		// number between 0~99 and print out the list
+		for(int number = 0; number < array.length;number++) {
+			array[number] = (int) (Math.random()*99);
+		    System.out.println(array[number]);
+		}
+		
+		// the symbol of Max and Minimum value in the arry 
+		max(array[0], array);
+		min(array[0], array);
+			
+   }
+	
+	public static void max(int maxValue,int[] array) {
+		// pick up maximum value
+		for(int max = 1; max < array.length; max++) {
+			if(array[max] > maxValue) {
+				maxValue = array[max];
+			}	
+		// print out the maximum value
+		}
+		System.out.println("The maximum Value is: " + maxValue);
+	}
+	
+	public static void min(int minValue,int[] array) {
+		// pick up minimum value
+		for(int min = 1; min < array.length; min++) {
+			if(array[min] < minValue) {
+				minValue = array[min];
+			}
+
+		// print out the value
+	    }
+		System.out.println("The minimum Value is: " + minValue);	
+	}
+	
+}
